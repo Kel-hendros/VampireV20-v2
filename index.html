@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- set favicon -->
+<link rel="icon" href="images/v20favicon.png" type="image/png" sizes="16x16">
+
+<head>
+    <script src="https://kit.fontawesome.com/8a611956c8.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Version: Vampiro v20</title>
+    <link rel="stylesheet" href="style light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <main>
+        <div class="outer-section">
+            <div class="fixed-header">
+                <div class="logo">
+                    <img class="icon-header" src="images/favicon.png" alt="Vampiro: La Mascarada v20">
+                    <p id="translate-headertitle">Vampiro: La Mascarada v20 - Hoja de personaje</p>
+                </div>
+                <div class="actions">
+                    <button class="save" id="saveButton">Guardar</button>
+                    <button class="load" id="loadButton">Cargar</button>
+                    <button class="lock" id="lockButton">Bloquear edición</button>
+                    <button class="language" id="languageButton">Español</button>
+                    <input type="file" id="hidden-file-input" style="display: none;" accept=".json">
+                </div>
+            </div>
+            <div class="columna primera">
+            </div>
+            <div class="columna segunda">
+                <div class="section" id="informacion">
+                    <div class="primary-info-container" id="primary-info-container">
+                        <div id="primaryInformation">
+                        </div>
+                    </div>
+                    <div class="logo-container">
+                        <img src="images/logo.png" alt="Vampiro: La Mascarada v20">
+                    </div>
+                    <div class="secondary-info-container" id="secondary-info-container">
+                        <div id="secondaryInformation">
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="Atributos">
+                    <div class="title-container">
+                        <div class="title-left-image">3</div>
+                        <div class="title-left-bar"></div>
+                        <h1 id="translate-atributos" class="section-title">Atributos</h1>
+                        <div class="title-right-bar"></div>
+                        <div class="title-right-image">3</div>
+                    </div>
+                    <div class="attributes-container" id="attributes-container">
+                        <div class="attributes physical">
+                            <h2 class="rating-title" id="translate-fisicos">Fisicos</h2>
+                            <div id="physicalAttributes"></div>
+                        </div>
+                        <div class="attributes social">
+                            <h2 class="rating-title" id="translate-sociales">Sociales</h2>
+                            <div id="socialAttributes"></div>
+                        </div>
+                        <div class="attributes mental">
+                            <h2 class="rating-title" id="translate-mentales">Mentales</h2>
+                            <div id="mentalAttributes"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="Habilidades">
+                    <div class="title-container">
+                        <div class="title-left-image">3</div>
+                        <div class="title-left-bar"></div>
+                        <h1 id="translate-habilidades" class="section-title">Habilidades</h1>
+                        <div class="title-right-bar"></div>
+                        <div class="title-right-image">3</div>
+                    </div>
+                    <div class="abilities-container" id="abilities-container">
+                        <div class="abilities talents">
+                            <h2 class="rating-title" id="translate-talentos">Talentos</h2>
+                            <div id="talentsAbilities"></div>
+                        </div>
+                        <div class="abilities skills">
+                            <h2 class="rating-title" id="translate-tecnicas">Técnicas</h2>
+                            <div id="skillsAbilities"></div>
+                        </div>
+                        <div class="abilities knowledges">
+                            <h2 class="rating-title" id="translate-conocimientos">Conocimientos</h2>
+                            <div id="knowledgesAbilities"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="Ventajas">
+                    <div class="title-container">
+                        <div class="title-left-image">3</div>
+                        <div class="title-left-bar"></div>
+                        <h1 id="translate-ventajas" class="section-title">Ventajas</h1>
+                        <div class="title-right-bar"></div>
+                        <div class="title-right-image">3</div>
+                    </div>
+                    <div class="ventajas-container">
+                        <div class="disciplinas-container">
+                            <div class="title-container-edit">
+                                <h2 id="translate-disciplinas" class="section-title">Disciplinas</h2>
+                                <div class="agregar-disciplinas-container"></div>
+                            </div>
+                            <div class="disciplinas-list"></div>
+                        </div>
+                        <div class="trasfondos-container">
+                            <div class="title-container-edit">
+                                <h2 id="translate-trasfondos" class="section-title">Trasfondos</h2>
+                                <div class="agregar-trasfondos-container"></div>
+                            </div>
+                            <div class="trasfondos-list"></div>
+                        </div>
+                        <div class="virtudes-container">
+                            <div class="title-container-edit">
+                                <h2 id="translate-virtudes" class="section-title">Virtudes</h2>
+                                <div class="agregar-virtudes-container"></div>
+                            </div>
+                            <div class="virtudes-elements"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="section sangre-voluntad" id="sangre-voluntad">
+                    <div class="no-title-container">
+                        <div class="title-left-image">3</div>
+                        <div class="title-middle-bar"></div>
+                        <div class="title-right-image">3</div>
+                    </div>
+                    <div class="sangre-voluntad-container">
+                        <div class="sangre-container">
+                            <h2 id="translate-sangre" class="section-title">Reserva de Sangre</h2>
+                            <div class="sangre-elements-container">
+                                <div class="sangre-buttons-container spend">
+                                    <i class="fa-solid fa-droplet-slash spend-blood"></i>
+                                </div>
+                                <div class="sangre-elements"></div>
+                                <div class="sangre-buttons-container restore">
+                                    <i class="fa-solid fa-droplet restore-blood"></i>
+                                    <i class="fa-solid fa-droplet rare-blood1"></i>
+                                    <i class="fa-solid fa-droplet rare-blood2"></i>
+                                </div>
+                            </div>
+                            <div class="max-blood-container">
+                                <label class="sangre-max" id="translate-sangreMax">Máximo</label>
+                                <div class="sangre-max-value">?</div>
+                            </div>
+                        </div>
+                        <div class="voluntad-container">
+                            <h2 id="translate-voluntad" class="section-title">Fuerza de Voluntad</h2>
+                            <div class="voluntad-elements"></div>
+                        </div>
+                        <div class="experiencia-container">
+                            <h2 id="translate-experiencia" class="section-title">Experiencia</h2>
+                            <div class="experiencia-elements"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="columna tercera"></div> -->
+            <div class="fixed-footer"></div>
+        </div>
+        <div class="especialidad-popup">
+            <button class="close-popup"><i class="fas fa-times"></i></button>
+            <label class="pop-up-title" id="translate-popupTitle">Especialidades</label>
+            <div class="especialidad-popup-container">
+                <label class="sin-especialidad" id="translate-especialidad0">Sin especialidades</label>
+                <div class="lista-especialidades">
+                </div>
+                <div class="add-speciality-container">
+                    <input type="text" class="especialidad-input" placeholder="Nueva especialidad">
+                    <i class="agregar-especialidad fa-solid fa-circle-plus"></i>
+                </div>
+            </div>
+        </div>
+        <div class="modal clanes"></div>
+        <div class="modal disciplinas"></div>
+    </main>
+    <script src="/JavaScript/main.js" type="module"></script>
+</body>
+
+
+</html>
