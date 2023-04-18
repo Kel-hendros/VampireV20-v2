@@ -181,7 +181,6 @@ html {
 }
 
 .fa-pen-to-square.disabled {
-
     display: none;
 }
 
@@ -196,11 +195,26 @@ html {
 
 .disciplinas-container,
 .trasfondos-container,
-.virtudes-containe {
+.virtudes-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+
+.virtudes-justify {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 100%;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    max-height: 200px;
+    min-height: 200px;
 }
 
 
@@ -252,7 +266,8 @@ html {
 
 }
 
-.road-label {
+.road-label,
+h3 {
     font-family: 'delavan', sans-serif;
     font-weight: 400;
     font-size: 17px;
@@ -410,6 +425,7 @@ html {
     gap: 20px;
     width: 100%;
 }
+
 .ventajas-container {
     margin-bottom: 10px;
 }
@@ -509,6 +525,7 @@ html {
     line-height: 16px;
 
 }
+
 .temporaryValue.zero {
     background-color: transparent;
     color: lightgray;
@@ -553,6 +570,7 @@ html {
 .square-will.filled {
     background-color: black;
 }
+
 .square-will.disabled {
     background-color: lightgray;
     border: 1px solid lightgray;
@@ -1021,6 +1039,7 @@ html {
 
     transition: all 0.2s ease-in-out;
 }
+
 .fa-droplet:active,
 .fa-droplet-slash:active {
     transform: scale(0.5);
@@ -1121,18 +1140,20 @@ html {
 .experience-elements-container {
     display: grid;
     color: black;
-	grid-template-columns: repeat(10, auto);
-	grid-template-rows: repeat(3, auto);
-	gap: 5px;
-	justify-items: center;
-	align-items: center;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
     cursor: pointer;
 }
+
 .experiencia-elements {
-margin-left: 10px;
+    margin-left: 10px;
 }
+
 .experience-elements-container span:nth-child(5n-5) {
-	margin-right: 10px;
+    margin-right: 10px;
 }
 
 .experience-point-filled {

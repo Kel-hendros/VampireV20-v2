@@ -18,6 +18,7 @@ export function lockEditing() {
       }
     });
 
+    //unlock the edition
     setLockEdition(false);
   } else {
     //if it is not, lock it
@@ -37,7 +38,7 @@ export function lockEditing() {
       element.readOnly = lockEdition;
     } else if (element.tagName === "SELECT" || element.tagName === "BUTTON") {
       element.disabled = lockEdition;
-    } 
+    }
   });
 }
 

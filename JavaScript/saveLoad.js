@@ -123,9 +123,6 @@ function updateData(loadedData) {
   deepMerge(willPower, loadedData.willpower);
   deepMerge(experience, loadedData.experience);
   // new data to update here..
-
-  // console.log("Updated allAttributes:", allAttributes);
-  // console.log("Updated allCharacterInfo:", allCharacterInfo);
 }
 
   

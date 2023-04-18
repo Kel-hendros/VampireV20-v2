@@ -6,8 +6,8 @@ import {
 import { findInfoDiv, findInfoElement } from "./globalFunctions.js";
 import { loadFromLocalStorage, saveToLocalStorage } from "./saveLoad.js";
 import { selectedLanguage } from "./configurations.js";
-import {withLockEditionCheck} from "./editCharacter.js";
-import {openClansModal} from "./clansModal.js";
+import { withLockEditionCheck } from "./editCharacter.js";
+import { openClansModal } from "./clansModal.js";
 
 export let allCharacterInfo;
 
@@ -74,14 +74,12 @@ function createClanLabel(currentInfoElement) {
   clanLabel.classList.add("clan-label");
   clanLabel.dataset.type = currentInfoElement.type;
   clanLabel.dataset.id = currentInfoElement.id;
-  clanLabel.dataset.clanId = currentInfoElement.value;
+  clanLabel.dataset.clanid = currentInfoElement.value;
 
   clanLabel.addEventListener(
     "click",
     withLockEditionCheck("clan-label", (e) => {
-      
       openClansModal();
-
     })
   );
 
@@ -90,7 +88,8 @@ function createClanLabel(currentInfoElement) {
 
 function populateClanLabel() {
   const clanLabel = document.getElementById("clanLabel");
-  const clanSelected = clanLabel.dataset.clanId;
+  const clanSelected = clanLabel.dataset.clanid;
+
   const clanName = findClan(clanSelected);
 
   if (selectedLanguage === "es") {
@@ -176,7 +175,7 @@ export function findClan(id) {
     if (clanElement) {
       return clanElement;
     } else {
-      console.error("Clan not found with id:", id);
+      console.trace("Clan not found with id:", id);
       return null;
     }
   } else {

@@ -1,5 +1,5 @@
 import { backgrounds } from "./defaultAttributes.js";
-import { selectedLanguage } from "./configurations.js";
+import { currentLockStatus, selectedLanguage } from "./configurations.js";
 import { saveToLocalStorage } from "./saveLoad.js";
 
 function sortBackgrounds(backgrounds) {
@@ -99,8 +99,17 @@ function createBackgroundLabel(currentBackground) {
 
 function addBackgroundButton() {
   const addBackgroundButton = document.createElement("i");
-  addBackgroundButton.classList.add("fa-solid","fa-pen-to-square", "add-background", "toggle-read-only");
+  addBackgroundButton.classList.add(
+    "fa-solid",
+    "fa-pen-to-square",
+    "add-background",
+    "toggle-read-only"
+  );
   addBackgroundButton.dataset.type = "background";
+
+  if (currentLockStatus()) {
+    addBackgroundButton.classList.add("disabled");
+  }
 
   addBackgroundButton.addEventListener("click", () => {
     openBackgroundsModal();
@@ -129,7 +138,6 @@ function populateBackgroundsModal() {
 
   backgroundsModalContent.appendChild(listBackgrounds());
   backgroundsModalContent.appendChild(buttonCreateCustomBackground());
-
 
   backgroundsModalContent.appendChild(modalButtons());
 }

@@ -1,5 +1,5 @@
 import { disciplines, sendas } from "./defaultAttributes.js";
-import { selectedLanguage } from "./configurations.js";
+import { selectedLanguage, currentLockStatus } from "./configurations.js";
 import { saveToLocalStorage } from "./saveLoad.js";
 
 let titleSelected = "disciplinas";
@@ -198,8 +198,18 @@ function createDisciplineLabel(currentDiscipline) {
 
 function addDisciplineButton() {
   const addDisciplineButton = document.createElement("i");
-  addDisciplineButton.classList.add("fa-solid","fa-pen-to-square", "add-discipline", "toggle-read-only");
+  addDisciplineButton.classList.add(
+    "fa-solid",
+    "fa-pen-to-square",
+    "add-discipline",
+    "toggle-read-only"
+  );
   addDisciplineButton.dataset.type = "discipline";
+
+  // add disabled class if the lockEdition is true
+  if (currentLockStatus()) {
+    addDisciplineButton.classList.add("disabled");
+  }
 
   addDisciplineButton.addEventListener("click", () => {
     openDiscplinesModal();
@@ -290,7 +300,9 @@ function listPaths() {
   for (let i = 0; i < discplinesWithPaths.length; i++) {
     const currentDiscipline = discplinesWithPaths[i];
     const disciplineWithPathContainer = document.createElement("div");
-    disciplineWithPathContainer.classList.add("multiple-element-list-container");
+    disciplineWithPathContainer.classList.add(
+      "multiple-element-list-container"
+    );
 
     const disciplineTitle = document.createElement("label");
     disciplineTitle.classList.add("discipline-title");

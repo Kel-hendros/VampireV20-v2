@@ -1,5 +1,5 @@
 import { virtues, roads } from "./defaultAttributes.js";
-import { selectedLanguage } from "./configurations.js";
+import { currentLockStatus, selectedLanguage } from "./configurations.js";
 import { saveToLocalStorage } from "./saveLoad.js";
 
 function sortRoads(roads) {
@@ -125,7 +125,6 @@ function createElementRating(currentElement) {
   const elementRating = document.createElement("div");
   elementRating.classList.add("dots");
   const activeRoad = Object.assign({}, ...roads.filter((road) => road.active));
-  
 
   for (let i = 0; i < 5; i++) {
     const dot = document.createElement("span");
@@ -167,8 +166,17 @@ function createElementLabel(currentElement) {
 
 function addElementButton() {
   const addElementButton = document.createElement("i");
-  addElementButton.classList.add("fa-solid","fa-pen-to-square","add-virtue", "toggle-read-only");
+  addElementButton.classList.add(
+    "fa-solid",
+    "fa-pen-to-square",
+    "add-virtue",
+    "toggle-read-only"
+  );
   addElementButton.dataset.type = "virtue";
+
+  if (currentLockStatus()) {
+    addElementButton.classList.add("disabled");
+  }
 
   addElementButton.addEventListener("click", () => {
     openElementsModal();

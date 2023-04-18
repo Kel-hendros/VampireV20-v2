@@ -11,6 +11,14 @@ export function initializeConfigurations() {
   initializeLanguage();
 }
 
+export function currentLockStatus() {
+  const lockEditionConfig = configurations.find(
+    (config) => config.name === "lockEdition"
+  );
+  return lockEditionConfig.value;
+}
+
+
 export function setLockEdition(value) {
   lockEdition = value;
   //find the lockEdition object in the array
