@@ -11,7 +11,7 @@ import {
   roads,
   virtues,
   willPower,
-  experience
+  experience,
 } from "./defaultAttributes.js";
 
 import { allAttributes, createAllRatingGroups } from "./createRatings.js";
@@ -38,15 +38,12 @@ const allRatings = {
   road: roads,
   willpower: willPower,
   experience: experience,
-
 };
 
 //funcion para encontrar el rating de un array
 export function findRatingElement(datasetType, id) {
   const array = allRatings[datasetType];
-  console.trace('datasetType', datasetType);
-  console.log('id', id);
-  
+
   if (array) {
     const ratingElement = array.find((attribute) => attribute.id == id);
     if (ratingElement) {

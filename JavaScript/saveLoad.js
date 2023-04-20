@@ -71,14 +71,14 @@ function deepMerge(target, source) {
 
 export function saveToLocalStorage() {
   const exportData = getExportData();
-  console.trace("Saving data:", exportData);
+  // console.trace("Saving data:", exportData);
   localStorage.setItem("savedData", JSON.stringify(exportData));
   generateAll();
 }
 
 export function loadFromLocalStorage() {
   generateAll();
-  console.log("Loading from local storage");
+  // console.log("Loading from local storage");
 
   const savedData = localStorage.getItem("savedData");
   // console.log("Loaded data from local storage:", savedData);
@@ -109,7 +109,7 @@ function getExportData() {
 }
 
 function updateData(loadedData) {
-  console.log("Updating data with:", loadedData);
+  // console.log("Updating data with:", loadedData);
 
   deepMerge(allAttributes, loadedData.attributes);
   deepMerge(allCharacterInfo, loadedData.characterInfo);

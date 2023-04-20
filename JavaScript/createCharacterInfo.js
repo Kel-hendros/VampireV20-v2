@@ -175,7 +175,7 @@ export function findClan(id) {
     if (clanElement) {
       return clanElement;
     } else {
-      console.trace("Clan not found with id:", id);
+      console.log("Clan not found with id:", id);
       return null;
     }
   } else {

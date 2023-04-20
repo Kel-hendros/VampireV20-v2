@@ -16,7 +16,7 @@ export function displayExperience() {
         experiencePoint.dataset.type = "experience";
 
         if (i < currentExperience) {
-            experiencePoint.classList.add("experience-point-filled");
+            experiencePoint.classList.add("experience-point", "filled");
         }
 
 

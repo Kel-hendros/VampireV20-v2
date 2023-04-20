@@ -18,7 +18,6 @@ export function currentLockStatus() {
   return lockEditionConfig.value;
 }
 
-
 export function setLockEdition(value) {
   lockEdition = value;
   //find the lockEdition object in the array
@@ -33,19 +32,14 @@ export function setLockEdition(value) {
 
 //initialize the edition button based on lockEdition value from array
 function initializeLockEdition() {
-  console.log("initializing lock edition");
-
   const toggleReadOnlyElements = document.querySelectorAll(".toggle-read-only");
   const lockButton = document.querySelector(".lock");
   var editionConfig = configurations.find(
     (config) => config.name === "lockEdition"
   );
   lockEdition = editionConfig.value;
-  console.log("lockEdition: " + lockEdition);
 
   if (lockEdition === false) {
-    console.log("afuera");
-
     //if the value in the array is false, unlock it
     lockButton.classList.remove("locked");
     toggleReadOnlyElements.forEach((element) => {

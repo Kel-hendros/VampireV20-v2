@@ -50,6 +50,7 @@ var translations = {
     sangreRara: "Rare Blood",
     sangreMax: "Max. Blood-points per turn:",
     experiencia: "Experience",
+    salud: "Health",
 
     //Mensajes
     especialidad0: "No specialities",
@@ -79,6 +80,7 @@ var translations = {
     sangreRara: "Sangre Rara",
     sangreMax: "Máx. puntos de Sangre por turno:",
     experiencia: "Experiencia",
+    salud: "Salud",
   },
 };
 
