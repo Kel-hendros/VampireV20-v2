@@ -418,8 +418,7 @@ h3 {
 
 
 .attributes-container,
-.abilities-container,
-.ventajas-container {
+.abilities-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -966,6 +965,64 @@ h3 {
     color: blue;
 }
 
+/* -------------------------------- */
+/* ---------- Ventajas ------------ */
+/* -------------------------------- */
+
+
+.ventajas-container {
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 3fr auto 2fr;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    grid-template-areas:
+        "title title title"
+        "disciplinas virtues salud"
+        "separador separador salud"
+        "sangre experiencia salud";
+    column-gap: 20px;
+
+}
+
+.title-container.ventajas {
+    grid-area: title;
+}
+
+.disciplinas-container {
+    grid-area: disciplinas;
+}
+
+.virtues-container {
+    grid-area: virtues;
+}
+
+.no-title-container {
+    grid-area: separador;
+}
+
+.sangre-container {
+    grid-area: sangre;
+}
+
+.experiencia-container {
+    grid-area: experiencia;
+}
+
+.salud-container {
+    grid-area: salud;
+}
+
+
+.virtue-list-container {
+    margin-bottom: 15px;
+}
+
+
 /* Reserva de Sangre y Fuerza de Voluntad  */
 /* //////////////////////////////////////  */
 
@@ -980,10 +1037,17 @@ h3 {
     margin-bottom: 10px;
 }
 
+.square {
+
+    width: 13px;
+    height: 13px;
+    border: 1px solid var(--primaryColor);
+}
+
 .sangre-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 0px;
 }
@@ -1072,13 +1136,6 @@ h3 {
     font-size: 15px;
 }
 
-.square {
-    width: 13px;
-    height: 13px;
-    border: 1px solid black;
-
-}
-
 .state-empty {
     background-color: white;
 
@@ -1163,4 +1220,106 @@ h3 {
     color: black;
     background-color: black;
     cursor: pointer;
+}
+
+
+/* ------------------------- */
+/* ---------- Salud -------- */
+/* ------------------------- */
+.salud-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.salud-elements {
+    display: flex;
+    align-items: flex-start;
+    transition: grid-template-columns 0.5s ease-in-out;
+}
+
+.health-levels-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: ease-in-out .3s;
+}
+
+.health-buttons-container {
+    position: absolute;
+    top: 15%;
+    right: -100%;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.health-buttons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  
+}
+.salud-container .health-status-indicator.square {
+    width: 18px;
+    height: 18px;
+}
+.health-buttons i {
+    cursor: pointer;
+    transform: scale(1);
+    transition: all .1s ease-in;
+}
+
+.health-buttons i:hover {
+    transform: scale(1.2);
+}
+
+.salud-container:hover .health-buttons-container {
+    transform: translateX(-30%);
+}
+
+.salud-container:hover .health-levels-container {
+    width: 60%;
+}
+
+.health-row {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    justify-items: end;
+}
+
+.health-level-label {
+    justify-self: start;
+}
+
+.salud-container .square {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 2px solid var(--primaryColor);
+    position: relative;
+}
+
+.bashing {
+    background-image: url("images/bashIcon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+.lethal {
+    background-image: url("images/lethalIcon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aggravated {
+    background-image: url("images/aggravatedIcon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

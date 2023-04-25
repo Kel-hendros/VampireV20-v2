@@ -33,6 +33,13 @@
                 </div>
             </div>
             <div class="columna primera">
+                <div class="trasfondos-container">
+                    <div class="title-container-edit">
+                        <h2 id="translate-trasfondos" class="section-title">Trasfondos</h2>
+                        <div class="agregar-trasfondos-container"></div>
+                    </div>
+                    <div class="trasfondos-list"></div>
+                </div>
             </div>
             <div class="columna segunda">
                 <div class="section" id="informacion">
@@ -95,27 +102,20 @@
                     </div>
                 </div>
                 <div class="section" id="Ventajas">
-                    <div class="title-container">
-                        <div class="title-left-image">3</div>
-                        <div class="title-left-bar"></div>
-                        <h1 id="translate-ventajas" class="section-title">Ventajas</h1>
-                        <div class="title-right-bar"></div>
-                        <div class="title-right-image">3</div>
-                    </div>
                     <div class="ventajas-container">
+                        <div class="title-container ventajas">
+                            <div class="title-left-image">3</div>
+                            <div class="title-left-bar"></div>
+                            <h1 id="translate-ventajas" class="section-title">Ventajas</h1>
+                            <div class="title-right-bar"></div>
+                            <div class="title-right-image">3</div>
+                        </div>
                         <div class="disciplinas-container">
                             <div class="title-container-edit">
                                 <h2 id="translate-disciplinas" class="section-title">Disciplinas</h2>
                                 <div class="agregar-disciplinas-container"></div>
                             </div>
                             <div class="disciplinas-list"></div>
-                        </div>
-                        <div class="trasfondos-container">
-                            <div class="title-container-edit">
-                                <h2 id="translate-trasfondos" class="section-title">Trasfondos</h2>
-                                <div class="agregar-trasfondos-container"></div>
-                            </div>
-                            <div class="trasfondos-list"></div>
                         </div>
                         <div class="virtudes-container">
                             <div class="title-container-edit">
@@ -130,15 +130,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="section sangre-voluntad" id="sangre-voluntad">
-                    <div class="no-title-container">
-                        <div class="title-left-image">3</div>
-                        <div class="title-middle-bar"></div>
-                        <div class="title-right-image">3</div>
-                    </div>
-                    <div class="sangre-voluntad-container">
+                        <div class="no-title-container">
+                            <div class="title-left-image">3</div>
+                            <div class="title-middle-bar"></div>
+                            <div class="title-right-image">3</div>
+                        </div>
                         <div class="sangre-container">
                             <h2 id="translate-sangre" class="section-title">Reserva de Sangre</h2>
                             <div class="sangre-elements-container">
@@ -159,7 +155,12 @@
                         </div>
                         <div class="salud-container">
                             <h2 id="translate-salud" class="section-title">Salud</h2>
-                            <div class="salud-elements"></div>
+                            <div class="salud-elements">
+                                
+
+
+
+                            </div>
                         </div>
                         <div class="experiencia-container">
                             <h2 id="translate-experiencia" class="section-title">Experiencia</h2>
@@ -168,24 +169,22 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="columna tercera"></div> -->
             <div class="fixed-footer"></div>
-        </div>
-        <div class="especialidad-popup">
-            <button class="close-popup"><i class="fas fa-times"></i></button>
-            <label class="pop-up-title" id="translate-popupTitle">Especialidades</label>
-            <div class="especialidad-popup-container">
-                <label class="sin-especialidad" id="translate-especialidad0">Sin especialidades</label>
-                <div class="lista-especialidades">
-                </div>
-                <div class="add-speciality-container">
-                    <input type="text" class="especialidad-input" placeholder="Nueva especialidad">
-                    <i class="agregar-especialidad fa-solid fa-circle-plus"></i>
+            <div class="especialidad-popup">
+                <button class="close-popup"><i class="fas fa-times"></i></button>
+                <label class="pop-up-title" id="translate-popupTitle">Especialidades</label>
+                <div class="especialidad-popup-container">
+                    <label class="sin-especialidad" id="translate-especialidad0">Sin especialidades</label>
+                    <div class="lista-especialidades">
+                    </div>
+                    <div class="add-speciality-container">
+                        <input type="text" class="especialidad-input" placeholder="Nueva especialidad">
+                        <i class="agregar-especialidad fa-solid fa-circle-plus"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="modal clanes"></div>
-        <div class="modal disciplinas"></div>
+            <div class="modal clanes"></div>
+            <div class="modal disciplinas"></div>
     </main>
     <script src="./JavaScript/main.js" type="module"></script>
 </body>

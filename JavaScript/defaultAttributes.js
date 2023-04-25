@@ -158,7 +158,7 @@ export var talentsAbilities = [
     id: 10,
     name_en: "Subterfuge",
     name_es: "Subterfugio",
-    specialities : [],
+    specialities: [],
   },
   {
     type: "talentsAbilities",
@@ -1372,12 +1372,36 @@ export let bloodPool = [
 ];
 
 export let willPower = [
-  { id: 1, type: "permanent", value: 0, name_es: "Voluntad Permanente", name_en: "Permanent Willpower" },
-  { id: 2, type: "temporary", value: 0, name_es: "Voluntad Temporal", name_en: "Temporary Willpower" },
+  {
+    id: 1,
+    type: "permanent",
+    value: 0,
+    name_es: "Voluntad Permanente",
+    name_en: "Permanent Willpower",
+  },
+  {
+    id: 2,
+    type: "temporary",
+    value: 0,
+    name_es: "Voluntad Temporal",
+    name_en: "Temporary Willpower",
+  },
+];
 
-]
+export let experience = [{ id: 1, value: 0 }];
 
-export let experience = [
-  {id: 1 , value: 0 }
-]
+export let healthStatus = [
+  { type: "bashDamage", value: 0 },
+  { type: "lethalDamage", value: 0 },
+  { type: "aggravatedDamage", value: 0 },
+];
 
+export let healthLevels = [
+  { id: 1, name_es: "Magullado", name_en: "Bruised", penalizer: "" },
+  { id: 2, name_es: "Lastimado", name_en: "Hurt", penalizer: -1 },
+  { id: 3, name_es: "Lesionado", name_en: "Injured", penalizer: -1 },
+  { id: 4, name_es: "Herido", name_en: "Wounded", penalizer: -2 },
+  { id: 5, name_es: "Malherido", name_en: "Mauled", penalizer: -2 },
+  { id: 6, name_es: "Tullido", name_en: "Crippled", penalizer: -5 },
+  { id: 7, name_es: "Incapacitado", name_en: "Incapacitated", penalizer:""},  
+];

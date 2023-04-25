@@ -1,3 +1,4 @@
+import { initializeHealth } from "./salud.js";
 import { save, load, loadFromLocalStorage } from "./saveLoad.js";
 import { lockEditing, clickRatingValues, clickWillPowerTemporaryValues } from "./editCharacter.js";
 import { initializeConfigurations } from "./configurations.js";
@@ -34,6 +35,7 @@ sangreRara2.addEventListener("click", restoreRareBlood2);
 loadFromLocalStorage();
 
 initializeVentajas();
+initializeHealth();
 
 initializeConfigurations();
 

@@ -39,10 +39,10 @@ export function displayVirtues() {
   );
   addElementsContainer.innerHTML = "";
 
-  elementsDiv.appendChild(roadDiv);
-  createRoadElement(roadDiv);
   elementsDiv.appendChild(virtueListContainer);
   createElementList(virtueListContainer);
+  elementsDiv.appendChild(roadDiv);
+  createRoadElement(roadDiv);
 
   addElementsContainer.appendChild(addElementButton());
 }

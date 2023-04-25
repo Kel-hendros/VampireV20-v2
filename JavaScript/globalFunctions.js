@@ -23,6 +23,7 @@ import { translateAll } from "./translations.js";
 import { clickRatingValues } from "./editCharacter.js";
 import { saveToLocalStorage } from "./saveLoad.js";
 import { initializeVentajas } from "./ventajasSection.js";
+import { initializeHealth } from "./salud.js";
 
 const allRatings = {
   physicalAttributes: physicalAttributes,
@@ -105,4 +106,7 @@ export function generateAll() {
 
   //Generate Ventajas display
   initializeVentajas();
+
+  //Generate health
+  initializeHealth();
 }
