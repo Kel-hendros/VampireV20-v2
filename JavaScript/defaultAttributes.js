@@ -1397,11 +1397,11 @@ export let healthStatus = [
 ];
 
 export let healthLevels = [
-  { id: 1, name_es: "Magullado", name_en: "Bruised", penalizer: "" },
-  { id: 2, name_es: "Lastimado", name_en: "Hurt", penalizer: -1 },
-  { id: 3, name_es: "Lesionado", name_en: "Injured", penalizer: -1 },
-  { id: 4, name_es: "Herido", name_en: "Wounded", penalizer: -2 },
-  { id: 5, name_es: "Malherido", name_en: "Mauled", penalizer: -2 },
-  { id: 6, name_es: "Tullido", name_en: "Crippled", penalizer: -5 },
-  { id: 7, name_es: "Incapacitado", name_en: "Incapacitated", penalizer:""},  
+  { id: 1, name_es: "Magullado", name_en: "Bruised", penalizer: "", movement_en: "No movement penalization", movement_es: "Sin penalizador de movimiento" },
+  { id: 2, name_es: "Lastimado", name_en: "Hurt", penalizer: -1, movement_en: "No movement penalization", movement_es: "Sin penalizador de movimiento" },
+  { id: 3, name_es: "Lesionado", name_en: "Injured", penalizer: -1, movement_en: "Half the running speed", movement_es: "Mitad de la velocidad máxima al correr" },
+  { id: 4, name_es: "Herido", name_en: "Wounded", penalizer: -2, movement_en: "Can't run. On a turn can only move or attack unless divides the dice pool.", movement_es: "No puede correr. Solo puede atacar o moverse en el turno a menos que divida los dados" },
+  { id: 5, name_es: "Malherido", name_en: "Mauled", penalizer: -2, movement_en: "Can only limp (3 mts. per turn)", movement_es: "Solo puede cojear (3 metros por turno)" },
+  { id: 6, name_es: "Tullido", name_en: "Crippled", penalizer: -5, movement_en: "Can only crawl one meter per turn", movement_es: "Solo puede arrastrarse un metro por turno" },
+  { id: 7, name_es: "Incapacitado", name_en: "Incapacitated", penalizer:"", movement_en: "Can not move. Probably unconscious", movement_es: "No puede moverse. Probablemente inconciente"},  
 ];
