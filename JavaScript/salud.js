@@ -21,6 +21,30 @@ function displayHealth() {
   });
 
   healthContainer.appendChild(createHealthButtons());
+  displayMovementPenalizer();
+}
+
+function displayMovementPenalizer() {
+  const healthLevel = getCurrentDamageTypes().length;
+  console.log("healthLevel", healthLevel);
+
+  const healthMovementPenalizerContainer =
+    document.querySelector(".salud-movimiento");
+  healthMovementPenalizerContainer.innerHTML = "";
+
+  const movementPenalizerLabel = document.createElement("label");
+
+  if (healthLevel) {
+    if (selectedLanguage === "es") {
+      movementPenalizerLabel.innerHTML =
+        healthLevels[healthLevel - 1].movement_es;
+    } else {
+      movementPenalizerLabel.innerHTML =
+        healthLevels[healthLevel - 1].movement_en;
+    }
+  }
+
+  healthMovementPenalizerContainer.appendChild(movementPenalizerLabel);
 }
 
 function getCurrentDamageTypes() {
@@ -221,5 +245,6 @@ function updateHealth(type, action) {
   } else if (action === "plus" && totalDamage < 7) {
     healthStatus[healthStatusIndex].value += 1;
   }
+
   displayHealth();
 }
