@@ -676,7 +676,7 @@ export var disciplines = [
     id: 9,
     name_es: "Dominación",
     name_en: "Dominate",
-    link: "https://whitewolf.fandom.com/wiki/Dominate",
+    link: "https://whitewolf.fandom.com/wiki/Dominate_(VTM)",
     active: false,
     value: 0,
   },
@@ -852,7 +852,7 @@ export var disciplines = [
     id: 31,
     name_es: "Presencia",
     name_en: "Presence",
-    link: "https://whitewolf.fandom.com/wiki/Presence",
+    link: "https://whitewolf.fandom.com/wiki/Presence_(VTM)",
     active: false,
     value: 0,
   },
@@ -1405,3 +1405,9 @@ export let healthLevels = [
   { id: 6, name_es: "Tullido", name_en: "Crippled", penalizer: -5, movement_en: "Can only crawl one meter per turn", movement_es: "Solo puede arrastrarse un metro por turno" },
   { id: 7, name_es: "Incapacitado", name_en: "Incapacitated", penalizer:"", movement_en: "Can not move. Probably unconscious", movement_es: "No puede moverse. Probablemente inconciente"},  
 ];
+
+export let merits = [];
+
+export let flaws = [];
+
+

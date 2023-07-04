@@ -18,27 +18,35 @@
 
 <body>
     <main>
-        <div class="outer-section">
-            <div class="fixed-header">
-                <div class="logo">
-                    <img class="icon-header" src="images/favicon.png" alt="Vampiro: La Mascarada v20">
-                    <p id="translate-headertitle">Vampiro: La Mascarada v20 - Hoja de personaje</p>
-                </div>
-                <div class="actions">
-                    <button class="save" id="saveButton">Guardar</button>
-                    <button class="load" id="loadButton">Cargar</button>
-                    <button class="lock" id="lockButton">Bloquear edición</button>
-                    <button class="language" id="languageButton">Español</button>
-                    <input type="file" id="hidden-file-input" style="display: none;" accept=".json">
-                </div>
+        <div class="fixed-header">
+            <div class="logo">
+                <img class="icon-header" src="images/favicon.png" alt="Vampiro: La Mascarada v20">
+                <p id="translate-headertitle">Vampiro: La Mascarada v20 - Hoja de personaje</p>
             </div>
+            <div class="actions">
+                <button class="save" id="saveButton">Guardar</button>
+                <button class="load" id="loadButton">Cargar</button>
+                <button class="lock" id="lockButton">Bloquear edición</button>
+                <button class="language" id="languageButton">Español</button>
+                <input type="file" id="hidden-file-input" style="display: none;" accept=".json">
+            </div>
+        </div>
+        <div class="outer-section">
             <div class="columna primera">
-                <div class="trasfondos-container">
-                    <div class="title-container-edit">
-                        <h2 id="translate-trasfondos" class="section-title">Trasfondos</h2>
-                        <div class="agregar-trasfondos-container"></div>
+                <div class="tras-meritos">
+                    <div class="tabs">
+                        <div class="title-container-edit">
+                            <h2 id="translate-trasfondos" class="section-title">Trasfondos</h2>
+                            <div class="agregar-trasfondos-container"></div>
+                        </div>
+                        <div class="title-container-edit">
+                            <h2 id="translate-meritos" class="section-title">Meritos</h2>
+                            <div class="agregar-meritos-container"></div>
+                        </div>
                     </div>
-                    <div class="trasfondos-list"></div>
+                    <div class="trasmeritos-container">
+                        <div class="trasfondos-list"></div>
+                    </div>
                 </div>
             </div>
             <div class="columna segunda">
@@ -165,22 +173,23 @@
                     </div>
                 </div>
             </div>
-            <div class="fixed-footer"></div>
-            <div class="especialidad-popup">
-                <button class="close-popup"><i class="fas fa-times"></i></button>
-                <label class="pop-up-title" id="translate-popupTitle">Especialidades</label>
-                <div class="especialidad-popup-container">
-                    <label class="sin-especialidad" id="translate-especialidad0">Sin especialidades</label>
-                    <div class="lista-especialidades">
-                    </div>
-                    <div class="add-speciality-container">
-                        <input type="text" class="especialidad-input" placeholder="Nueva especialidad">
-                        <i class="agregar-especialidad fa-solid fa-circle-plus"></i>
-                    </div>
+        </div>
+        <div class="fixed-footer"></div>
+        <div class="especialidad-popup">
+            <button class="close-popup"><i class="fas fa-times"></i></button>
+            <label class="pop-up-title" id="translate-popupTitle">Especialidades</label>
+            <div class="especialidad-popup-container">
+                <label class="sin-especialidad" id="translate-especialidad0">Sin especialidades</label>
+                <div class="lista-especialidades">
+                </div>
+                <div class="add-speciality-container">
+                    <input type="text" class="especialidad-input" placeholder="Nueva especialidad">
+                    <i class="agregar-especialidad fa-solid fa-circle-plus"></i>
                 </div>
             </div>
-            <div class="modal clanes"></div>
-            <div class="modal disciplinas"></div>
+        </div>
+        <div class="modal clanes"></div>
+        <div class="modal disciplinas"></div>
     </main>
     <script src="./JavaScript/main.js" type="module"></script>
 </body>

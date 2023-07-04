@@ -238,7 +238,7 @@ function populateDisciplinesModal() {
 
   if (titleSelected === "disciplinas") {
     disciplinesModalContent.appendChild(listDisciplines());
-    disciplinesModalContent.appendChild(buttonCreateCustomDiscipline());
+    // disciplinesModalContent.appendChild(buttonCreateCustomDiscipline());
   } else if (titleSelected === "sendas") {
     disciplinesModalContent.appendChild(listPaths());
   }
@@ -251,16 +251,16 @@ function modalTitle() {
   const titleDiv = document.createElement("div");
   titleDiv.classList.add("modal-title-container");
 
-  const disciplineSelector = document.createElement("label");
-  disciplineSelector.classList.add("modal-selector-title", "disciplines");
+  const disciplineSelector = document.createElement("h1");
+  disciplineSelector.classList.add("sect-button", "disciplines");
   if (selectedLanguage === "es") {
     disciplineSelector.innerText = "Disciplinas";
   } else if (selectedLanguage === "en") {
     disciplineSelector.innerText = "Disciplines";
   }
 
-  const pathsSelector = document.createElement("label");
-  pathsSelector.classList.add("modal-selector-title", "paths");
+  const pathsSelector = document.createElement("h1");
+  pathsSelector.classList.add("sect-button", "paths");
   pathsSelector.setAttribute("id", "paths-selector");
   if (selectedLanguage === "es") {
     pathsSelector.innerText = "Sendas";
@@ -417,7 +417,7 @@ function listDisciplines() {
     disciplineItem.appendChild(disciplineIcon(currentDiscipline));
     listDiv.appendChild(disciplineItem);
   }
-
+  listDiv.appendChild(buttonCreateCustomDiscipline());
   return listDiv;
 }
 
@@ -477,7 +477,7 @@ function buttonCreateCustomDiscipline() {
 
   //translations
   if (selectedLanguage === "es") {
-    customDisciplineButton.innerText = "Crear Disciplina personalizada";
+    customDisciplineButton.innerText = "Crear Nueva Disciplina";
   }
   if (selectedLanguage === "en") {
     customDisciplineButton.innerText = "Create custom discipline";
@@ -545,7 +545,7 @@ function allowPathSelection() {
 function togglePathSelection() {
   const pathSelector = document.querySelector("#paths-selector");
   const disciplineSelector = document.querySelector(
-    ".modal-selector-title.disciplines"
+    ".sect-button.disciplines"
   );
   disciplineSelector.classList.remove("selected");
   pathSelector.classList.add("selected");
@@ -599,16 +599,22 @@ function primaryOption(currentPath) {
   const primaryOption = document.createElement("div");
   primaryOption.classList.add("primary-option");
 
-  const primaryOptionLabel = document.createElement("label");
-  primaryOptionLabel.classList.add("primary-option-label");
+  const primaryOptionLabel = document.createElement("i");
+  primaryOptionLabel.classList.add(
+    "primary-option-label", 
+    "fa-solid",
+    "fa-certificate"
+  );
 
-  //translations
+  // translations tooltip
+
   if (selectedLanguage === "es") {
-    primaryOptionLabel.innerText = "Primaria";
+    primaryOptionLabel.title = "Primaria";
   }
   if (selectedLanguage === "en") {
-    primaryOptionLabel.innerText = "Primary";
+    primaryOptionLabel.title = "Primary";
   }
+
 
   primaryOption.addEventListener("click", (e) => {
     const paths = pathsForDiscipline(currentPath.parentDisciplineId);

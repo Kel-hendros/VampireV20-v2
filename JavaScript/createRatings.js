@@ -84,8 +84,8 @@ export function createRatingGroup(ratingGroup) {
       ratingDiv.appendChild(createTemporaryValue(currentRatingElement));
     }
 
-    ratingDiv.appendChild(createSpecialities(currentRatingElement));
     ratingDiv.appendChild(createRatingDots(currentRatingElement));
+    
 
     parentDiv.appendChild(ratingDiv);
   }
@@ -153,7 +153,7 @@ function createRatingDots(currentRatingElement) {
     }
     ratingDots.appendChild(dot);
   }
-
+  ratingDots.appendChild(createSpecialities(currentRatingElement));
   return ratingDots;
 }
 

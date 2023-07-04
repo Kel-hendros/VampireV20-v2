@@ -146,7 +146,7 @@ function modalTitle() {
   const titleDiv = document.createElement("div");
   titleDiv.classList.add("modal-title-container");
 
-  const backgroundSelector = document.createElement("label");
+  const backgroundSelector = document.createElement("h1");
   backgroundSelector.classList.add("modal-title", "backgrounds");
   if (selectedLanguage === "es") {
     backgroundSelector.innerText = "Trasfondos";

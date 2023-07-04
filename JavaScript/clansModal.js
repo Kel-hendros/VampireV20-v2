@@ -103,7 +103,7 @@ function saveClan() {
 }
 
 function modalTitle() {
-  const title = document.createElement("h2");
+  const title = document.createElement("h1");
   if (selectedLanguage === "es") {
     title.innerText = "Seleccionar Clan";
   } else if (selectedLanguage === "en") {
@@ -122,7 +122,7 @@ function selectedClanInfo(clanDetailViewContainer) {
   clanInfo.classList.add("clan-info");
   clanInfo.innerHTML = "";
 
-  const clanNameTitle = document.createElement("h3");
+  const clanNameTitle = document.createElement("h2");
   clanNameTitle.classList.add("clan-name");
 
   const clanInfoDescriptionContainer = document.createElement("div");
@@ -138,7 +138,6 @@ function selectedClanInfo(clanDetailViewContainer) {
   clanWeakness.classList.add("clan-weakness");
 
   if (selectedClanObject) {
-    console.log("hay clan");
 
     const clanDiscplines = obtainClanDiscplinesObjects();
 
@@ -148,7 +147,11 @@ function selectedClanInfo(clanDetailViewContainer) {
       clanDisciplinesTitle.innerText = "Disciplinas del Clan";
       clanDiscplines.forEach((discipline) => {
         const disciplineName = document.createElement("li");
-        disciplineName.innerText = discipline.name_es;
+        const discplineLink = document.createElement("a");
+        discplineLink.href = discipline.link;
+        discplineLink.target = "_blank";
+        discplineLink.innerText = discipline.name_es;
+        disciplineName.appendChild(discplineLink);
         clanDisciplinesList.appendChild(disciplineName);
         clanWeakness.innerText =
           "Debilidad del Clan: " + selectedClanObject.weakness_es;
@@ -159,7 +162,11 @@ function selectedClanInfo(clanDetailViewContainer) {
       clanDisciplinesTitle.innerText = "Clan Disciplines";
       clanDiscplines.forEach((discipline) => {
         const disciplineName = document.createElement("li");
-        disciplineName.innerText = discipline.name_en;
+        const discplineLink = document.createElement("a");
+        discplineLink.href = discipline.link;
+        discplineLink.target = "_blank";
+        discplineLink.innerText = discipline.name_en;
+        disciplineName.appendChild(discplineLink);
         clanDisciplinesList.appendChild(disciplineName);
         clanWeakness.innerText =
           "Clan Weakness: " + selectedClanObject.weakness_en;
